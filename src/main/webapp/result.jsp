@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,13 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Welcome to APPK</h1>
-
-<form action="add">
-    Enter 1st number : <input type="text" name="num1"><br>
-    Enter 2nd number : <input type="text" name="num2"><br>
-    <input type="submit">
-</form>
+<h1>Result</h1>
+Result : <h3>${sum}</h3>
 
 </body>
 </html>
