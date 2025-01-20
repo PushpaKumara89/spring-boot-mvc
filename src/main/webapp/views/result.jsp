@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Result</h1>
-Result : <h3>${sum}</h3>
+Result : <h3>${alien}</h3>
 
 </body>
 </html>
