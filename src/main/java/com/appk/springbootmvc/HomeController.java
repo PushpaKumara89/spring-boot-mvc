@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -13,10 +14,13 @@ public class HomeController {
     }
 
     @RequestMapping("/add")
-    public String add(@RequestParam("num1") int i, @RequestParam("num2")int j, HttpSession session) {
-        int sum = i + j;
+    public ModelAndView add(@RequestParam("num1") int i, @RequestParam("num2")int j) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("result.jsp");
 
-        session.setAttribute("sum", sum);
-        return "result.jsp";
+        int sum = i + j;
+        mv.addObject("sum", sum);
+
+        return mv;
     }
 }
