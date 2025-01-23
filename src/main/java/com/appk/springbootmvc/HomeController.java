@@ -4,6 +4,7 @@ import com.appk.springbootmvc.model.Alien;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,14 +23,14 @@ public class HomeController {
         return "result";
     }
 
-    @RequestMapping("/addAlien")
-    public String addAlien(@RequestParam("aid") int aid, @RequestParam("aname") String aname, Model m) {
-
-        Alien a = new Alien();
-        a.setAid(aid);
-        a.setAname(aname);
-
+    /*@RequestMapping("/addAlien")
+    public String addAlien(@ModelAttribute Alien a, Model m) {
         m.addAttribute("alien", a);
+        return "result";
+    }*/
+
+    @RequestMapping("/addAlien")
+    public String addAlien(@ModelAttribute("a1") Alien a) {
         return "result";
     }
 }
