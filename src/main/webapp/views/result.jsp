@@ -10,8 +10,9 @@
 </head>
 <body>
 <h1>Result</h1>
-<%--Result : <h3>${alien}</h3>--%>
 Result : <h3>${a1}</h3>
+
+Welcome Back ${name}
 
 </body>
 </html>
